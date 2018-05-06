@@ -1,3 +1,3 @@
-import Login from './app/components/login'
+import Navigator from './app/Navigator'
 
-export default Login
+export default Navigator

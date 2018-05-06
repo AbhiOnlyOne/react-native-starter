@@ -3,7 +3,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableOpacity
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -15,12 +16,18 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+  navigate(){
+    this.props.navigation.toggleDrawer();
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to Login!
-        </Text>
+        <TouchableOpacity onPress={() => this.navigate()}>
+          <Text style={styles.welcome}>
+            Welcome to Login!
+          </Text>
+        </TouchableOpacity>
         <Text style={styles.instructions}>
           To get started, edit App.js
         </Text>
